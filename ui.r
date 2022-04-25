@@ -3,7 +3,7 @@
 #################################################
 
 library(shiny)
-library(txtdata2vec)
+library(text2vec)
 library(tm)
 library(tokenizers)
 library(wordcloud)
