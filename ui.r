@@ -87,56 +87,56 @@ shinyUI(fluidPage(
                          DT::dataTableOutput("doc_term_matxsummary1")),
                 
                 
-                tabPanel("TF-IDF", 
-                         verbatimTextOutput("idf_size"),
-                         h4("Sample TF-IDF (Term Frequency-Inverse Document Frequency) "),
-                         DT::dataTableOutput("idf_table"),br(), 
-                         h4("Word Cloud"),
-                         plotOutput("idf_wordcloud",height = 700, width = 700),br(),
-                         #textInput("in",label = "text"),
-                         h4("Weights Distribution of Wordcloud"),
-                         DT::dataTableOutput("doc_term_matxsummary2")),
-                tabPanel("Term Co-occurrence",
-                         h4("Doc_Term_Tatx Co-occurrence"),
-                         visNetworkOutput("cog.doc_term_matx",height = 700, width = 700),
-                         h4("TF-IDF Co-occurrence"),
-                         visNetworkOutput("cog.idf",height = 700, width = 700)
-                ),
-                tabPanel("Bigram",
-                         h4('Collocations Bigrams'),
-                         p('If a corpus has n word tokens, then it can have at most (n-1) bigrams. However, most of
-                                    these bigram are uninteresting. The interesting ones - termed collocations bigrams - comprise
-                                    those bigrams whose occurrence in the corpus is way more likely than would be true if the 
-                                    constituent words in the bigram randomly came together. Below is the list of all collocations 
-                                    bigrams (top 100, if collocations bigrams are above 100) from the corpus you uploaded on 
-                                    this App',align = "Justify"),
-                         DT::dataTableOutput("bi.grams"),
-                         h4("Bigram wordcloud"),
-                         plotOutput("bi_word_cloud",height=700,width=700),
-                         
-                ),
-                tabPanel("Concordance",
-                         h4('Concordance'),
-                         p('Concordance allows you to see the local context around a word of interest. It does so by building a moving window of words before and after the focal word\'s every instance in the corpus. Below is the list of all instances of concordance in the corpus for your word of interest entered in the left side bar panel of this app. You can change the concordance window or word of interest in the left side bar panel.',align = "Justify"),
-                         #verbatimTextOutput("concordance"))
-                         DT::dataTableOutput("concordance")),
-                tabPanel("Downloads",
-                         h4("Download Doc_Term_Tatx"),
-                         #h3("-------------"),
-                         verbatimTextOutput("doc_term_matx_text"),
-                         downloadButton('download_doc_term_matx', 'Download Doc_Term_Tatx'),br(),
-                        
-                         
-                         h3("-----------------------------------------------------"),
-                         h4("Download TF-IDF"),
-                         verbatimTextOutput("tfidf_text"),
-                         downloadButton('download_tfidf', 'Download TF-IDF'),br(),
-                         
-                         
-                         h3("-----------------------------------------------------"),
-                         h4("Download Bigram Corpus"),
-                         verbatimTextOutput("bi_text"),
-                         downloadButton("download_bigram","Download Bigram Corpus"))
+#               tabPanel("TF-IDF", 
+#                        verbatimTextOutput("idf_size"),
+#                        h4("Sample TF-IDF (Term Frequency-Inverse Document Frequency) "),
+#                        DT::dataTableOutput("idf_table"),br(), 
+#                        h4("Word Cloud"),
+#                        plotOutput("idf_wordcloud",height = 700, width = 700),br(),
+#                        #textInput("in",label = "text"),
+#                        h4("Weights Distribution of Wordcloud"),
+#                        DT::dataTableOutput("doc_term_matxsummary2")),
+#               tabPanel("Term Co-occurrence",
+#                        h4("Doc_Term_Tatx Co-occurrence"),
+#                        visNetworkOutput("cog.doc_term_matx",height = 700, width = 700),
+#                        h4("TF-IDF Co-occurrence"),
+#                        visNetworkOutput("cog.idf",height = 700, width = 700)
+#               ),
+#               tabPanel("Bigram",
+#                        h4('Collocations Bigrams'),
+#                        p('If a corpus has n word tokens, then it can have at most (n-1) bigrams. However, most of
+#                                   these bigram are uninteresting. The interesting ones - termed collocations bigrams - comprise
+#                                   those bigrams whose occurrence in the corpus is way more likely than would be true if the 
+#                                   constituent words in the bigram randomly came together. Below is the list of all collocations 
+#                                   bigrams (top 100, if collocations bigrams are above 100) from the corpus you uploaded on 
+#                                   this App',align = "Justify"),
+#                        DT::dataTableOutput("bi.grams"),
+#                        h4("Bigram wordcloud"),
+#                        plotOutput("bi_word_cloud",height=700,width=700),
+#                        
+#               ),
+#               tabPanel("Concordance",
+#                        h4('Concordance'),
+#                        p('Concordance allows you to see the local context around a word of interest. It does so by building a moving window of words before and after the focal word\'s every instance in the corpus. Below is the list of all instances of concordance in the corpus for your word of interest entered in the left side bar panel of this app. You can change the concordance window or word of interest in the left side bar panel.',align = "Justify"),
+#                        #verbatimTextOutput("concordance"))
+#                        DT::dataTableOutput("concordance")),
+               tabPanel("Downloads",
+                        h4("Download Doc_Term_Tatx"),
+                        #h3("-------------"),
+                        verbatimTextOutput("doc_term_matx_text"),
+                        downloadButton('download_doc_term_matx', 'Download Doc_Term_Tatx'),br(),
+#                       
+#                        
+#                        h3("-----------------------------------------------------"),
+#                        h4("Download TF-IDF"),
+#                        verbatimTextOutput("tfidf_text"),
+#                        downloadButton('download_tfidf', 'Download TF-IDF'),br(),
+#                        
+#                        
+#                        h3("-----------------------------------------------------"),
+#                        h4("Download Bigram Corpus"),
+#                        verbatimTextOutput("bi_text"),
+#                         downloadButton("download_bigram","Download Bigram Corpus"))
                           
           
                 
